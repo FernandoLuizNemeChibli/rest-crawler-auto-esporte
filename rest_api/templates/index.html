@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<br>
+	<b>Para fazer a requisição envie-a no seguinte formato:</b>
+	<br>
+	{"nickname":"seu nickname", "password":"sua senha"}
+	<br><br>	
+	Para adquirir seu nickname e sua senha <a href="{{url_for('register')}}">registre-se aqui!</a>
+	<br><br>
+	<b>As urls para requisição são:</b>
+	<br>
+	localhost:5000/restapi/fromfile
+	<br>
+	localhost:5000/restapi/fromsite
+	<br><br>
+	A primeira consulta o banco de dados local, que contem a informação pronta - atualizada a cada 5 minutos.
+	<br>
+	Já a segunda busca no site do feed, processa a informação e a retorna.
+{% endblock %}

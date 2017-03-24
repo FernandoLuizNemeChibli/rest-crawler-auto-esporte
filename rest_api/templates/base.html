@@ -1,0 +1,14 @@
+<html>
+        <head>
+		{% if title %}
+	                <title>{{title}} - Rest-Crawler Auto Esporte</title>
+		{% else %}
+	                <title>Rest-Crawler Auto Esporte</title>
+		{% endif %}
+        </head>
+        <body>
+        <h1>Rest-Crawler Auto Esporte</h1>
+        <br><hr><br>
+		{% block content %}{% endblock %}
+        </body>
+</html>
