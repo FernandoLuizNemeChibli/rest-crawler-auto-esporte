@@ -4,6 +4,7 @@ from flask import abort
 from flask import jsonify
 from flask import request
 from flask import render_template
+from flask import url_for
 from page_crawler import get_information
 from page_crawler import load_information
 from rest_api import flask_application
@@ -40,8 +41,7 @@ def register():
 		)
 		db.session.add(new_user)
 		db.session.commit()
-		flash("User registred! Please log in to continue to your new account!")
-		return redirect(url_for('login'))
+		return redirect(url_for('index'))
 	return render_template('register.html',title='Registro',form=form)
 	
 @flask_application.route('/',methods=['GET','POST'])
